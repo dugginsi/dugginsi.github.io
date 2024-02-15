@@ -8,202 +8,201 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
     <script src="https://unpkg.com/react-spring@9.2.4/dist/react-spring.js"></script>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap">
+
     <style>
+        :root {
+            --mainTextColor: #333;
+            --mainLinkColor: #1565c0;
+            --mainBorderColor: #e0e0e0;
+            --mainBgColor: #f5d9d9;
 
-:root {
-    --mainTextColor: #333;
-    --mainLinkColor: #1565c0;
-    --mainBorderColor: #e0e0e0;
-    --mainBgColor: #f5d9d9;
+            --fontfamily: Garamond;
+        }
 
-    --fontfamily: Garamond; 
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--fontFamily);
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--fontFamily);
-}
+        body {
+            background-color: var(--mainBgColor);
+            color: var(--mainTextColor);
+            line-height: 1.6;
+            padding: 20px;
+        }
 
-body {
-    background-color: var(--mainBgColor);
-    color: var(--mainTextColor);
-    line-height: 1.6;
-    padding: 20px;
-}
+        a {
+            color: var(--mainLinkColor);
+            text-decoration: none;
+        }
 
-a {
-    color: var(--mainLinkColor);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-
-#container--main {
-    max-width: 950px;
-    margin: auto;
-    background: #f5d9d9;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.section--page {
-    margin-bottom: 2rem;
-}
-
-#profile-pic {
-    border-radius: 50%;
-    border: 4px solid #e9d7d7; 
-    width: 200px; 
-    height: 200px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    object-fit: cover; 
-}
-
-.navbar {
-    margin-bottom: 20px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.navbar-nav .nav-link {
-    padding: 10px 15px;
-    border-radius: 4px;
-    margin: 0 5px;
-    transition: background-color 0.2s ease-in-out;
-}
-
-.navbar-nav .nav-link:hover {
-    background-color: var(--mainBorderColor);
-}
-
-.navbar {
-    background-color: #f5d9d9;
-    /* Change background color */
-}
-
-.navbar-brand {
-    color: #140202;
-    /* Change text color */
-    font-weight: bold;
-}
-
-.navbar-toggler-icon {
-    background-color: #210606;
-    /* Change toggle icon color */
-}
-
-.navbar-nav .nav-link {
-    color: #280606 !important;
-    /* Change text color for links */
-}
-
-.navbar-nav .nav-link:hover {
-    color: #f39c12 !important;
-    /* Change text color on hover */
-}
-
-.line-break {
-    background-color: var(--mainBorderColor);
-    height: 2px;
-    margin: 20px 0;
-}
+        a:hover {
+            text-decoration: underline;
+        }
 
 
-.bg-1 {
-    background-color: #d5c6c6;
-    color: #050000;
-}
+        #container--main {
+            max-width: 950px;
+            margin: auto;
+            background: #f5d9d9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
 
-.container-fluid {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+        .section--page {
+            margin-bottom: 2rem;
+        }
+
+        #profile-pic {
+            border-radius: 50%;
+            border: 4px solid #e9d7d7;
+            width: 200px;
+            height: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .navbar-nav .nav-link {
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin: 0 5px;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: var(--mainBorderColor);
+        }
+
+        .navbar {
+            background-color: #f5d9d9;
+            /* Change background color */
+        }
+
+        .navbar-brand {
+            color: #140202;
+            /* Change text color */
+            font-weight: bold;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #210606;
+            /* Change toggle icon color */
+        }
+
+        .navbar-nav .nav-link {
+            color: #280606 !important;
+            /* Change text color for links */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #f39c12 !important;
+            /* Change text color on hover */
+        }
+
+        .line-break {
+            background-color: var(--mainBorderColor);
+            height: 2px;
+            margin: 20px 0;
+        }
 
 
-.name {
-    font-family: "Montserrat", sans-serif;
-    font-size: 2em;
-    font-weight: bold;
-    color: #965c5c;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-    margin: 20px 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    transition: color 0.5s ease-in-out;
-}
+        .bg-1 {
+            background-color: #d5c6c6;
+            color: #050000;
+        }
 
-.name:hover {
-    color: #3498db;
-}
+        .container-fluid {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
 
 
-footer.contact-section {
-    background-color: var(--mainBgColor);
-    padding: 40px 20px;
-    text-align: center;
-    border-top: 2px solid var(--accentColor);
-    margin-top: 60px;
-    transition: background-color 0.3s ease-in-out;
-}
+        .name {
+            font-family: "Montserrat", sans-serif;
+            font-size: 2em;
+            font-weight: bold;
+            color: #965c5c;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: color 0.5s ease-in-out;
+        }
 
-.contact-item {
-    margin: 15px 0;
-    font-size: 18px;
-    opacity: 0.8;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.contact-link {
-    color: var(--accentColor);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-
-.contact-link:hover {
-    text-decoration: underline;
-}
-
-.contact-section:hover {
-    background-color: var(--accentColor);
-}
-
-.contact-section:hover .contact-item {
-    opacity: 1;
-}
+        .name:hover {
+            color: #3498db;
+        }
 
 
-@media (max-width: 768px) {
-    .section--page{
-        padding-top: 1em;
-        padding-bottom: 1em;
-    }
-    
-    .navbar {
-        flex-direction: column;
-    }
-    
-    .navbar-nav .nav-link {
-        margin: 5px 0;
-    }
-}
+        footer.contact-section {
+            background-color: var(--mainBgColor);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 2px solid var(--accentColor);
+            margin-top: 60px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .contact-item {
+            margin: 15px 0;
+            font-size: 18px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .contact-link {
+            color: var(--accentColor);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        .contact-section:hover {
+            background-color: var(--accentColor);
+        }
+
+        .contact-section:hover .contact-item {
+            opacity: 1;
+        }
+
+
+        @media (max-width: 768px) {
+            .section--page {
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar-nav .nav-link {
+                margin: 5px 0;
+            }
+        }
     </style>
-     
 </head>
 
 <body>
@@ -331,24 +330,23 @@ footer.contact-section {
         <section id="Technical requirements-1" class="section--page">
             <h2>Technical requirements-1</h2>
             <div class="container-fluid bg-1">
-                <div id="email" onclick="showhideEmail()">Show my Email</div>
-                <script>
-                    var shown = false;
-function showhideEmail() {
-  if (shown) {
-    document.getElementById("email").innerHTML = "Show my email";
-    shown = false;
-  } else {
-    var myemail =
-      "<a href= 'mailto:dugginsi" +
-      "@" +
-      "ucmail. uc.edu'>dugginsi" +
-      "@" +
-      "ucmail.uc.edu</a>";
-    document.getElementById("email").innerHTML = myemail;
-    shown = true;
-  }
-}
+                <div id="email-id" onclick="showhideEmail()">Show my Email</div>
+                <script>var shown = false;
+                    function showhideEmail() {
+                        if (shown) {
+                            document.getElementById("email").innerHTML = "Show my email";
+                            shown = false;
+                        } else {
+                            var myemail =
+                                "<a href= 'mailto:dugginsi" +
+                                "@" +
+                                "ucmail. uc.edu'>dugginsi" +
+                                "@" +
+                                "ucmail.uc.edu</a>";
+                            document.getElementById("email").innerHTML = myemail;
+                            shown = true;
+                        }
+                    }
                 </script>
             </div>
             <br>
