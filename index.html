@@ -139,6 +139,45 @@
 
         </section>
 
+        <section id="Technical requirements-1" class="section--page">
+            <h2>Technical requirements-1</h2>
+            <div class="container-fluid bg-1">
+                <div id="email" onclick="showhideEmail()">Show my Email</div>
+                <script src="email.js"></script>
+            </div>
+            <br>
+            <div class="container-fluid bg-1">
+                <div id="digit-clock" style="color: red;"></div>
+                <script>
+                    function displayTime() {
+                        document.getElementById('digit-clock').innerHTML = "Current time:" + new Date();
+                    }
+                    setInterval(displayTime, 500);
+                </script>
+            </div>
+            <div> <canvas id="analog-clock" width="150" height="150" style="background-color:#999"></canvas>
+                <script src="https://waph-uc.github.io/clock.js"></script>
+                <script>
+                    var canvas = document.getElementById("analog-clock");
+
+                    var ctx = canvas.getContext("2d");
+
+                    var radius = canvas.height / 2;
+
+                    ctx.translate(radius, radius);
+                    radius = radius * 0.9;
+
+                    setInterval(drawClock, 1000);
+                    function drawClock() {
+                        drawFace(ctx, radius);
+
+                        drawNumbers(ctx, radius);
+
+                        drawTime(ctx, radius);
+                    }</script>
+            </div>
+        </section>
+
         <section id="Waph projects" class="section--page">
             <h2>Course Projects</h2>
             <div class="container-fluid bg-1"> <strong>Displaying Real Time Weather Updates, humidity and
@@ -152,6 +191,7 @@
                 <p id="joke-container"></p>
             </div>
         </section>
+
     </div>
     <script>
         let lastVisitTime = document.cookie.match(/(^|;) ?lastVisit=([^;]*)(;|$)/);
