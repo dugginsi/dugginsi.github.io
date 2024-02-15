@@ -332,7 +332,24 @@ footer.contact-section {
             <h2>Technical requirements-1</h2>
             <div class="container-fluid bg-1">
                 <div id="email" onclick="showhideEmail()">Show my Email</div>
-                <script src="email.js"></script>
+                <script>
+                    var shown = false;
+function showhideEmail() {
+  if (shown) {
+    document.getElementById("email").innerHTML = "Show my email";
+    shown = false;
+  } else {
+    var myemail =
+      "<a href= 'mailto:dugginsi" +
+      "@" +
+      "ucmail. uc.edu'>dugginsi" +
+      "@" +
+      "ucmail.uc.edu</a>";
+    document.getElementById("email").innerHTML = myemail;
+    shown = true;
+  }
+}
+                </script>
             </div>
             <br>
             <div class="container-fluid bg-1">
